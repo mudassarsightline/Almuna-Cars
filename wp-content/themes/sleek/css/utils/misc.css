@@ -1,0 +1,42 @@
+/**
+ * @a11y-hide
+ *
+ * Hides an element in such a way that it's still read by screen readers
+ */
+/**
+ * @a11y-show
+ *
+ * Un-hides an a11y-hidden element
+ */
+/**
+ * @strip-units
+ *
+ * Removes any unit (%, px, rem etc) from a number
+ *
+ * @param	int		$number: the number
+ */
+/**
+ * @ellipsis
+ *
+ * Prevents text from wrapping and instead adds an ellipsis to the end
+ */
+/**
+ * @clearfix
+ *
+ * Classic clearfix
+ */
+/**
+ * @separated-inline-list
+ *
+ * Displays a list of items inline, separating them with a character and margin
+ *
+ * @param	string	$separator: text to separate items with
+ * @param	unit	$margin: potential margin between items
+ */
+/**
+ * @data-definition
+ *
+ * Displays a DL with DT/DD combo as key: value pairs
+ */
+
+/*# sourceMappingURL=misc.css.map */

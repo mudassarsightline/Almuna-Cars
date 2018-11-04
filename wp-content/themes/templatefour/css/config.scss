@@ -1,0 +1,84 @@
+// Media query breakpoints
+$bp-1: '(min-width: 400px)';
+$bp-2: '(min-width: 600px)';
+$bp-3: '(min-width: 800px)';
+$bp-4: '(min-width: 1000px)';
+$bp-5: '(min-width: 1200px)';
+
+$bp-1-max: '(max-width: 399px)';
+$bp-2-max: '(max-width: 599px)';
+$bp-3-max: '(max-width: 799px)';
+$bp-4-max: '(max-width: 999px)';
+$bp-5-max: '(max-width: 1199px)';
+
+// Logo
+$site-logo: 'gfx/almuna.png';
+$site-logo-width: 423px;
+$site-logo-height: 90px;
+
+// Site width and max width
+$site-width: 90%;
+$max-site-width: 1060px;
+
+// Margins, paddings and gutter
+$margin: 1.5rem;
+$gutter: 3rem;
+$section-padding: 3rem;
+
+// Animations and effects
+$transition-speed: .1s;
+$transition-easing: ease-out;
+$border-radius: .5rem;
+
+// Typography
+$body-font: Raleway, Arial, sans-serif;
+$body-color: #fff;
+$body-font-weight: normal;
+$body-letter-spacing: 0;
+$body-font-size: 1rem;
+$body-line-height: 1.8;
+
+$heading-font: Raleway, Arial, sans-serif;
+$heading-color: #fff;
+$heading-font-weight: normal;
+$heading-line-height: 1.2;
+$heading-letter-spacing: 0;
+
+$h1-size: 2.8rem;
+$h2-size: 2.8rem;
+$h3-size: 1.4rem;
+$h4-size: 1.2rem;
+$h5-size: 1.1rem;
+$h6-size: 1rem;
+
+// Colors
+$link-color: #3166ff;
+$link-color-hover: #fb0200;
+$link-color-visited: #3166ff;
+$link-decoration: none;
+
+$error-color: #c00;
+$success-color: #0c0;
+$white-color: #fefefe;
+$black-color: #060606;
+$gray-color: #5c5c5c;
+
+$default-bg: #222;
+$alt-bg: #222;
+$inverted-bg: #fefefe;
+$header-bg: #28235b;
+$bg-color: #ffffff;
+
+$border-color: #e8e8e8;
+$shadow-color: rgba(0, 0, 0, .4);
+
+// Buttons
+$button-color: #f29200;
+$button-secondary-color: #123;
+$button-disabled-color: #999;
+$button-fade: 0;
+$button-border: false;
+$button-border-radius: 0;
+$button-shadow: true;
+$button-padding-vertical: .4rem;
+$button-padding-horizontal: 1.6rem;

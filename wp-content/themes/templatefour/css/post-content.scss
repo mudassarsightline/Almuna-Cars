@@ -1,0 +1,60 @@
+// Columned page
+html.page-template-page-cols #post-content {
+	@media #{$bp-3} and #{$bp-4-max} {
+		@include cols(2);
+	}
+
+	@media #{$bp-4} {
+		@include cols(3);
+	}
+
+	// For some reason headings should be upper case here ??
+	h1, 
+	h2, 
+	h3, 
+	h4, 
+	h5, 
+	h6 {
+		text-transform: uppercase;
+	}
+
+	// Also make them smaller :/
+	h2 {
+		font-size: $h2-size * .8;
+	}
+}
+
+#post-content {
+	// Forms in pages
+	color: $black-color;
+	h3 {
+			color: $black-color;
+		}
+	
+	form {
+		@include box;
+		background: $bg-color;
+		border: 1px solid $border-color;
+
+		textarea {
+			max-height: 100px;
+		}
+
+		input:not([type=checkbox]):not([type=radio]), 
+		textarea {
+			width: 100%;
+		}
+
+		p {
+			position: relative; // TO position loading gif
+			color: $black-color;
+		}
+
+		input[type=submit] + img {
+			position: absolute;
+			right: -20px;
+			top: 50%;
+			margin-top: -8px;
+		}
+	}
+}

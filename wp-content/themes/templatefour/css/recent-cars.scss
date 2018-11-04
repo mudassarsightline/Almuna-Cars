@@ -1,0 +1,15 @@
+#recent-cars {
+	// This is completely unique so no need to add a class / mixin - do if you re-use tho!
+	h2 {
+		text-align: center;
+		padding-bottom: $margin;
+		border-bottom: 3px solid $border-color;
+	}
+
+	// All list styling done with classes - check template
+
+	// New version with iframe
+	iframe {
+		height: 580px;
+	}
+}

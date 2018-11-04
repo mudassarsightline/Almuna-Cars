@@ -1,0 +1,30 @@
+#connected-posts {
+	margin: 0;
+
+	> ul {
+		margin: 0;
+		list-style: none;
+
+		@media #{$bp-3} {
+			@include cols(3);
+		}
+
+		> li {
+			background: $white-color;
+
+			padding: 0 0 10px;
+
+			text-transform: uppercase;
+			text-align: center;
+
+			img {
+				display: block;
+				margin: 0 auto 10px;
+			}
+
+			a {
+				color: inherit;
+			}
+		}
+	}
+}

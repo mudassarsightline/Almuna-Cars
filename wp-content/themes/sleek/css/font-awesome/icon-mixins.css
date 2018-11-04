@@ -1,0 +1,30 @@
+/**
+ * @icon
+ *
+ * Adds an icon to an element
+ *
+ * @param	string		$icon: the icon to use, for example "\f150" or $fa-var-toggle-down
+ * @param	string		$where: where the icon should be placed "before" or "after"
+ */
+/**
+ * @icon-fixed
+ *
+ * Fixes the position of the icon on either side of the element (useful for icons inside block-elements)
+ *
+ * @param	string		$where: where the icon should be placed "before" or "after"
+ */
+/**
+ * @icon-only
+ *
+ * Removes any text inside the element and displays only the icon
+ *
+ * @param	string		$where: should only be needed if you for some reason include the button "after"
+ */
+/**
+ * @icon-framed
+ *
+ * Gives the button a round frame with some shadow
+ * Affects both before and after so you may need to set either to display: none too
+ */
+
+/*# sourceMappingURL=icon-mixins.css.map */

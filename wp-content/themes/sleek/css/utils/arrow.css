@@ -1,0 +1,14 @@
+/**
+ * @arrow
+ *
+ * Adds an arrow to an element
+ *
+ * @param		position	$position: where the arrow should be added; left/top/right/bottom
+ * @param		unit		$size: size of arrow (20px for example)
+ * @param		color		$background: the arrow's background color
+ * @param		unit		$border-width: the width of the arrow's border
+ * @param		color		$border-color: color of the border
+ * @param		percent		$align: how to align the arrow
+ */
+
+/*# sourceMappingURL=arrow.css.map */

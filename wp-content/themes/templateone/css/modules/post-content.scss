@@ -1,0 +1,16 @@
+#post-content {
+	@include clearfix;
+
+	form {
+		@media #{$bp-3} {
+			width: 75%;
+			float: left;
+			margin-right: $gutter;
+		}
+
+		input:not([type=radio]):not([type=checkbox]):not([type=submit]), 
+		textarea {
+			width: 100%;
+		}
+	}
+}

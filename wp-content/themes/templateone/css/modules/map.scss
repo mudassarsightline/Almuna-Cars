@@ -1,0 +1,10 @@
+#map {
+	padding: 0;
+
+	> div.map {
+		> img {
+			width: 100%;
+			max-height: 400px;
+		}
+	}
+}

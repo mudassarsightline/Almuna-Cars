@@ -1,0 +1,56 @@
+@mixin box {
+	background: #242424;
+
+	margin: 0 0 $margin;
+	padding: 25px;
+
+	border: 1px solid #353535;
+
+	> :first-child {
+		margin-top: 0;
+	}
+
+	> :last-child {
+		margin-bottom: 0;
+	}
+
+	> p:last-of-type {
+		margin-bottom: 0;
+	}
+}
+
+@mixin icon-rounded ($size: 28px, $color: $gray-color) {
+	width: $size;
+	height: $size;
+
+	line-height: $size;
+	text-align: center;
+
+	border: 2px solid $color;
+	border-radius: 100%;
+}
+
+@mixin social-icons ($border: true, $size: 28px, $color: $gray-color) {
+	$sites: facebook, twitter, instagram, linkedin, youtube;
+	$icons: $fa-var-facebook, $fa-var-twitter, $fa-var-instagram, $fa-var-linkedin, $fa-var-youtube;
+
+	@for $i from 1 through length($sites) {
+		a[href^="http://#{nth($sites, $i)}.com"], 
+		a[href^="https://#{nth($sites, $i)}.com"], 
+		a[href^="http://www.#{nth($sites, $i)}.com"], 
+		a[href^="https://www.#{nth($sites, $i)}.com"], 
+		&[href^="http://#{nth($sites, $i)}.com"], 
+		&[href^="https://#{nth($sites, $i)}.com"], 
+		&[href^="http://www.#{nth($sites, $i)}.com"], 
+		&[href^="https://www.#{nth($sites, $i)}.com"] {
+			@include icon(nth($icons, $i));
+			@include icon-only;
+
+			display: inline-block;
+
+			@if ($border) {
+				@include icon-rounded($size, $color);
+			}
+		}
+	}
+}

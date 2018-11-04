@@ -1,0 +1,55 @@
+#slideshow {
+	position: relative;
+
+	img {
+		display: block;
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		opacity: 0;
+		transition: opacity 1s ease-in-out;
+
+		&.active {
+			opacity: 1;
+		}
+
+		&:first-child {
+			position: static;
+		}
+	}
+
+	nav {
+		@include section;
+
+		box-sizing: border-box;
+		padding-top: 0;
+		padding-bottom: 0;
+
+		position: absolute;
+		left: 0;
+		top: 50%;
+		width: 100%;
+		margin-top: -20px;
+
+		a {
+			display: block;
+			padding: 5px;
+			float: left;
+			text-decoration: none;
+			border: 1px solid $white-color;
+
+			&:hover {
+				color: $white-color;
+			}
+
+			&.next {
+				float: right;
+			}
+
+			@media #{$bp-2} {
+				padding: 20px;
+			}
+		}
+	}
+}

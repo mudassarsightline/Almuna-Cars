@@ -1,0 +1,51 @@
+/**
+ * @section
+ *
+ * Creates a full width section with centered content based on preferred site width
+ *
+ * @param	color	$bg: section background color
+ */
+/**
+ * @section-inner
+ *
+ * Creates a section within a section, so you can have an article as section, and article header as an inner section for example
+ *
+ * @param	string	$align: top/bottom; if you want to pull it up towards to top or down towards the bottom
+ */
+/**
+ * @unsection
+ *
+ * Utility mixin for removing section styling
+ */
+/**
+ * @section-centering
+ *
+ * Takes care of centering the section content using padding and calc
+ */
+/**
+ * @section-right
+ *
+ * Positions an element at the right edge of the inner content of the section
+ */
+/**
+ * @section-left
+ *
+ * Positions an element at the right left of the inner content of the section
+ */
+/**
+ * @section-bottom
+ *
+ * Positions an element at the bottom edge of the inner content of the section
+ */
+/**
+ * @section-top
+ *
+ * Positions an element at the top edge of the inner content of the section
+ */
+/**
+ * @section-border-centering
+ *
+ * Same as @section-centering but uses border instead of padding
+ */
+
+/*# sourceMappingURL=section.css.map */

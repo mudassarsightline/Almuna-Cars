@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AACC,YAAO;EACN,MAAM,EAAE,MAAM",
+"sources": ["serp.scss"],
+"names": [],
+"file": "serp.css"
+}

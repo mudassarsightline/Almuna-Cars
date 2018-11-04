@@ -1,0 +1,298 @@
+// Make all sections.. sections
+body {
+	// Add more here (maybe div? article?)
+	> header, 
+	> footer, 
+	> aside, 
+	> main, 
+	> section {
+		@include section($default-bg);
+	}
+}
+
+// A simpler button
+.button-clear {
+	@include button ($link-color, 0, 0, 1px solid $link-color, false);
+}
+
+// Some general styling
+h3, 
+h4, 
+h5, 
+h6 {
+//	text-transform: uppercase;
+	font-weight: normal;
+}
+
+// Header
+#header {
+	background: $bg-color;
+
+	padding-top: 0;
+	padding-bottom: 0;
+
+	// Logo
+	h1, 
+	p.logo {
+		position: relative; // Render on top of content beneath
+		z-index: 1;
+
+		@if ($site-logo) {
+			background: url($site-logo);
+			width: $site-logo-width;
+			max-width: 100%;
+			background-size: contain;
+			background-repeat: no-repeat;
+
+			a {
+				display: block;
+				height: $site-logo-height;
+				text-indent: -1000000px;
+				outline: 0;
+			}
+
+			@media #{$bp-3} {
+				float: left;
+				margin: 10px 0 0;
+			}
+		}
+		@else {
+			background: $default-bg;
+
+			@include heading($h1-size);
+		//	font-size: $h1-size !important; // Override @heading's media query
+
+			margin: 0 auto;
+			padding: 12px 0 0;
+
+			text-align: center;
+			line-height: 1;
+			text-transform: uppercase;
+
+			border-radius: .5rem;
+
+			@media #{$bp-3} {
+				float: left;
+				margin: 10px 0 -30px;
+				padding: 12px 20px;
+			}
+
+			b {
+				color: $link-color-hover;
+			}
+		}
+	}
+
+	// Nav
+	div.widget_nav_menu {
+		text-align: center;
+
+		@media #{$bp-3} {
+			float: right;
+		}
+
+		ul {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+
+		// First level
+		> ul {
+			// Hide home link in lo res
+			> li:first-child {
+				@media #{$bp-2-max} {
+					display: none;
+				}
+			}
+
+			// Separate items (except first to save some space)
+			> li + li {
+				margin: 0 5px;
+
+				@media #{$bp-1} {
+					margin: 0 10px;
+				}
+
+				@media #{$bp-2} {
+					margin: 0 20px;
+				}
+
+				@media #{$bp-3} {
+					margin: 0 0 0 20px;
+				}
+
+				@media #{$bp-4} {
+					margin: 0 0 0 50px;
+				}
+			}
+
+			// Each item
+			> li {
+				display: inline-block;
+				color: $link-color;
+
+				> a {
+					display: block;
+					padding: 15px 0;
+
+					color: inherit;
+					text-decoration: none;
+					text-transform: uppercase;
+
+					border-bottom: 6px solid $link-color;
+
+					b {
+						font-weight: normal;
+
+						@media #{$bp-2-max} {
+							display: none;
+						}
+					}
+				}
+
+				// Selected / over
+				&.active > a, 
+				> a:hover {
+					border-bottom-color: $link-color-hover;
+				}
+
+				// Sub menu
+				> ul {
+					// TODO...
+				}
+			}
+		}
+	}
+}
+
+// Hero
+#hero {
+	padding: 0;
+	min-height: 140px;
+
+	h1 {
+		position: absolute;
+		left: 10%;
+		top: 50%;
+		z-index: 1;
+
+		width: 80%;
+		margin: 0;
+		text-align: center;
+
+		margin-top: -#{($h1-size * $heading-line-height) / 2};
+	}
+
+	#home-page & h1 {
+		top: 20%;
+		margin-top: 0;
+		background: rgba(0,0,0,0.5);
+	}
+
+	#slideshow {
+		margin: 0;
+	}
+}
+
+// Main
+body > main {
+	//background-image: radial-gradient(500px at 50% -200px, lighten($default-bg, 20%) 0%, $default-bg 100%);
+	background-color: $bg-color;
+
+	h2{
+	  color: $black-color; 
+	}
+}
+
+// Aside
+#aside {
+	// background: url(gfx/default-aside.jpg) no-repeat 50% top;
+	// padding-top: $section-padding * 2;
+	text-align: center;
+	color:$black-color;
+	background-color: $bg-color;
+
+	h2 {
+	  color: $black-color;
+	}
+}
+
+// Map
+#map {
+	padding: 0;
+
+	> div.map {
+		> img {
+			width: 100%;
+			max-height: 400px;
+		}
+	}
+}
+
+// Footer
+#footer {
+	background: $bg-color;
+
+	padding-top: $section-padding / 2;
+	padding-bottom: $section-padding / 2;
+
+	color: $gray-color;
+	font-size: $body-font-size * .8;
+	text-transform: uppercase;
+
+	ul {
+		@include separated-inline-list('', 10px);
+		margin: 0 0 ($margin / 2);
+	}
+
+	p {
+		margin: 0;
+	}
+
+	a {
+		color: inherit;
+	}
+
+	// Float first menu to the right
+	div.widget_nav_menu:first-child {
+		float: right;
+
+		ul {
+			@include social-icons;
+		}
+	}
+}
+
+// Restyle forms a bit
+form {
+	input[type=text], 
+	input[type=search], 
+	input[type=email], 
+	input[type=url], 
+	input[type=tel], 
+	input[type=number], 
+	input[type=date], 
+	input[type=month], 
+	input[type=week], 
+	input[type=time], 
+	input[type=datetime], 
+	input[type=datetime-local], 
+	input[type=color], 
+	textarea {
+		border: 1px solid $border-color;
+		border-radius: 0;
+		outline: none;
+		//box-shadow: inset 2px 2px 4px rgba(0, 0, 0, .6);
+	}
+
+	input[type=submit]{
+	   background-color: $link-color !important;
+	   text-shadow: none;
+	   box-shadow: none;
+	}
+	input[type=submit]:hover{
+	   text-shadow: none;
+	   box-shadow: none;
+	}
+}

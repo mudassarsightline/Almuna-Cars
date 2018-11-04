@@ -1,0 +1,109 @@
+#featured-cars {
+	position: relative;
+
+	// Search
+	#search-dubicars {
+		background: rgba(0, 0, 0, .6);
+
+		box-sizing: border-box;
+		width: 335px;
+		max-width: 100%;
+
+		margin: 0 auto;
+		padding: $margin;
+
+		border-bottom: 1px solid rgba(0, 0, 0, .8);
+
+		@media #{$bp-4} {
+			position: absolute;
+			left: 0;
+			top: 0;
+			z-index: 2;
+
+			margin: 0;
+			height: calc(100% - 100px);
+		}
+
+		iframe {
+			height: 365px !important; // Override JS set height
+		}
+	}
+
+	// Slideshow nav
+	nav.fadeshow-nav {
+		position: absolute;
+		right: $margin;
+		bottom: 120px; // Height of figcaption + some margin
+		z-index: 2;
+	}
+
+	// Pagination
+	nav.fadeshow-pagination {
+		position: absolute;
+		left: 50%;
+		bottom: 40px;
+		z-index: 2;
+		transform: translateX(-50%);
+
+		@media #{$bp-4-max} {
+			display: none;
+		}
+	}
+
+	// List of cars
+	> ul {
+		margin: 0;
+		list-style: none;
+
+		// Each car
+		> li {
+			figure {
+				margin: 0;
+			}
+
+			img {
+				display: block;
+				width: 100%;
+			}
+
+			figcaption {
+				background: rgba(0, 0, 0, .6);
+
+				position: absolute;
+				left: 0;
+				bottom: 0;
+
+				box-sizing: border-box;
+				width: 100%;
+				min-height: 100px;
+				padding: $margin;
+
+				color: $white-color;
+
+				// Car name
+				h3 {
+					margin: 0;
+					color: $white-color;
+					text-transform: uppercase;
+					font-weight: normal;
+					text-shadow: 1px 1px 1px $shadow-color;
+				}
+
+				// Description
+				p {
+					margin: 0;
+				}
+
+				// Price
+				p.price {
+					position: absolute;
+					right: $margin;
+					top: 50%;
+					margin-top: -#{($body-font-size / 2) * $body-line-height};
+
+					font-size: 120%;
+				}
+			}
+		}
+	}
+}

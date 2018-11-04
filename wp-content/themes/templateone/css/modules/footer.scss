@@ -1,0 +1,23 @@
+#footer {
+	background: $alt-bg;
+
+	text-align: center;
+	font-size: $body-font-size * .8;
+	font-weight: bold;
+	color: $gray-color;
+
+	a[href="#top"] {
+		display: block;
+		margin: 20px auto 0;
+
+		color: $gray-color;
+
+		@include icon($fa-var-up-open);
+		@include icon-only();
+		@include icon-rounded(28px, $gray-color);
+	}
+
+	p {
+		margin: 0;
+	}
+}

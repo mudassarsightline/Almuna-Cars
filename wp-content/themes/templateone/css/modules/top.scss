@@ -1,0 +1,68 @@
+#top {
+	background: $inverted-bg;
+
+	// Less padding than normal @sections
+	padding-top: 10px;
+	padding-bottom: 10px;
+
+	// Smaller font-size
+	font-size: $body-font-size * .8;
+	line-height: 1;
+	color: $gray-color;
+
+	border-bottom: 1px solid $border-color;
+
+	// Neutral links
+	a {
+		color: inherit;
+	}
+
+	a[href^="mailto:"] {
+		color: $white-color;
+	}
+
+	// Display menu items on one row
+	ul {
+		margin: 0;
+		list-style: none;
+
+		li {
+			display: inline-block;
+			vertical-align: middle;
+		}
+	}
+
+	// Pipe separate contact menu
+	#menu-contact-menu {
+		@include separated-inline-list(' | ', 5px);
+
+		margin-bottom: 10px;
+
+		@media #{$bp-2} {
+			margin: 0;
+			float: left;
+		}
+	}
+
+	// Social icons
+	#menu-social-menu {
+		@include social-icons(false);
+
+		li {
+			margin: 0 10px 0 0;
+
+			a:hover:before {
+				color: $white-color;
+			}
+		}
+
+		@media #{$bp-2} {
+			margin: 0;
+			float: right;
+
+			li {
+				margin: 0 0 0 10px;
+			}
+		}
+	}
+}

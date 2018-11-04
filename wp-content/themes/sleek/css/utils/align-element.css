@@ -1,0 +1,16 @@
+/**
+ * @align-left
+ *
+ * Floats an element to the left at the set breakpoint and gives it some sensible margin
+ *
+ * @param	min-width-declaration	$bp: at which breakpoint the floating should occur or false for no difference in resolutions
+ */
+/**
+ * @align-right
+ *
+ * Floats an element to the right at the set breakpoint and gives it some sensible margin
+ *
+ * @param	min-width-declaration	$bp: at which breakpoint the floating should occur or false for no difference in resolutions
+ */
+
+/*# sourceMappingURL=align-element.css.map */

@@ -1,0 +1,29 @@
+// Make all sections.. sections
+body {
+	// Add more here (maybe div? article?)
+	> header, 
+	> footer, 
+	> aside, 
+	> main, 
+	> section, 
+	> nav {
+		@include section($default-bg);
+
+		> section:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+h1, 
+h2 {
+	text-transform: uppercase;
+	margin-bottom: $margin;
+}
+
+h3, 
+h4, 
+h5, 
+h6 {
+	font-weight: bold;
+}

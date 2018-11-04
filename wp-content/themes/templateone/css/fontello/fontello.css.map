@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,UAWC;EAVA,WAAW,EAAE,aAAa;EAC1B,GAAG,EAAE,oCAAoC;EACzC,GAAG,EAAE,6PAIkE;EAEvE,WAAW,EAAE,MAAM;EACnB,UAAU,EAAE,MAAM",
+"sources": ["fontello.scss"],
+"names": [],
+"file": "fontello.css"
+}

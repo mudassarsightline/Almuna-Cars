@@ -1,0 +1,80 @@
+#aside {
+	// Make H2s look like H3s
+	h2 {
+		@include heading-size($h3-size);
+		text-transform: none;
+		font-weight: bold;
+	}
+
+	a {
+		color: inherit;
+	}
+
+	// Columns
+	@media #{$bp-2} and #{$bp-3-max} {
+		@include cols(2);
+	}
+
+	@media #{$bp-3} {
+		@include cols(4);
+	}
+
+	// Menus
+	ul {
+		margin-left: 0;
+		list-style: none;
+
+		li {
+			a {
+				@include icon($fa-var-angle-circled-right);
+
+				&:before {
+					color: $gray-color;
+				}
+
+				b {
+					font-weight: normal;
+				}
+			}
+		}
+	}
+
+	// Social menu
+	#menu-social-menu-1 {
+		@include social-icons(true, 36px, $button-color);
+
+		li {
+			display: inline-block;
+			margin: 0 5px 0 0;
+
+			a {
+				background: $button-color;
+				border: 0 !important;
+
+				&:before {
+					color: $white-color;
+					font-size: $body-font-size * 1.2 !important;
+				}
+			}
+
+			&.menu-facebook a {
+				background: #006699;
+			}
+			&.menu-twitter a {
+				background: #50a4ce;
+			}
+			&.menu-youtube a {
+				background: #cc3300;
+			}
+		}
+	}
+
+	// Search
+	div.widget_search {
+		input[name=s] {
+			display: block;
+			width: 100%;
+			margin: 0 0 ($margin / 2);
+		}
+	}
+}
